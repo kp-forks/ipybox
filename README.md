@@ -25,6 +25,11 @@ mcp-name: io.github.gradion-ai/ipybox
 
 ipybox is designed for agents that interact with their environment through [code actions](https://arxiv.org/abs/2402.01030) rather than JSON tool calls, a more reliable approach since LLMs are heavily pretrained on Python code compared to JSON tool call post-training. Agents generate and execute Python code that composes multiple MCP tool calls into a single action, using loops, conditionals, and data transformations that keep intermediate results out of the agent's context window. Since agent-generated code cannot be trusted, it must run in a secure sandboxed environment, and all MCP tool calls must be approved by the application. ipybox supports both with minimal setup.
 
+> [!NOTE]
+> **freeact agent**
+>
+> [freeact](https://github.com/gradion-ai/freeact) is a lightweight, general-purpose agent built on ipybox that acts via code actions rather than JSON tool calls. It also functions as a toolsmith, developing new tools from successful code actions to evolve its own tool library. It supports the [agentskills.io](https://agentskills.io) specification for extending its capabilities with specialized knowledge and workflows.
+
 ## Features
 
 - **Stateful code execution** — state persists across executions in IPython kernels
